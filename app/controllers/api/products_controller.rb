@@ -1,17 +1,20 @@
 class Api::ProductsController < ApplicationController
 
-  def all_products_action
+  def index
     @products = Product.all
-    render 'all_products.json.jb'
+    render 'index.json.jb'
   end
 
-  def first_product_action
-    @product = Product.first
-    render 'first_product.json.jb'
+  def show
+    @product = Product.find_by(id: params[:id])
+    render 'show.json.jb'
   end
-  def second_product_action
-    @product = Product.second
-    render 'second_product.json.jb'
+
+  def product_query_action
+    key = params["product"]
+    #key = "Truth"
+    @product = Product.find_by(id: key.to_i)
+    render 'product_query.json.jb'
   end
 
 end
