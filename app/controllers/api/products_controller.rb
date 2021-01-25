@@ -6,9 +6,12 @@ class Api::ProductsController < ApplicationController
       @products = @products.order(price: :desc)
     elsif params[:sort_order] == "asc"
       @products = @products.order(price: :asc)
-    else params[:discount]
-      @products = @products.where("price < ?", 10)
     end
+
+  if params[:discount]
+    @products = @products.where("price < ?", 10)
+  end
+  
     render 'index.json.jb'
   end
 

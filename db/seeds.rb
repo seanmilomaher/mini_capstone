@@ -6,32 +6,52 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Product.create(
+# Product.create(
+#   [
+#     {
+#       name: "Judge",
+#       price: 12,
+#       description: "Stable putter with a beaded rim and a flat profile."
+#     },
+#     {
+#       name: "Deputy",
+#       price: 12,
+#       description: "Understable putter with a beaded rim and a flat profile."
+#     },
+#     {
+#       name: "Truth",
+#       price: 15,
+#       description: "Neutral midrange with a beaded rim and a flat to slightly domey profile."
+#     },
+#     {
+#       name: "Verdict",
+#       price: 15,
+#       description: "Overstable midrange with a beaded rim and a flat to slightly domey profile."
+#     },
+#     {
+#       name: "Getaway",
+#       price: 15,
+#       description: "Stable fairway driver with a medium-width rim and a domey profile."
+#     }
+#   ]
+# )
+
+Supplier.create(
   [
     {
-      name: "Judge",
-      price: 12,
-      description: "Stable putter with a beaded rim and a flat profile."
+      name: "Jimmy's Mom's Supplies",
+      email: 'jms@gmai.com',
+      phone_number: '888-8898'
     },
     {
-      name: "Deputy",
-      price: 12,
-      description: "Understable putter with a beaded rim and a flat profile."
+      name: "Mojache's Magical Stuff",
+      email: 'mojachems@gmail.com',
+      phone_number: '777-7787'
     },
     {
-      name: "Truth",
-      price: 15,
-      description: "Neutral midrange with a beaded rim and a flat to slightly domey profile."
-    },
-    {
-      name: "Verdict",
-      price: 15,
-      description: "Overstable midrange with a beaded rim and a flat to slightly domey profile."
-    },
-    {
-      name: "Getaway",
-      price: 15,
-      description: "Stable fairway driver with a medium-width rim and a domey profile."
+      name: "Disc Supplier",
+      email: 'DiscSupplier@gmail.com',
+      phone_number: '898-9908'
     }
   ]
 )
