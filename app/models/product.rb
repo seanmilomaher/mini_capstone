@@ -5,10 +5,12 @@ class Product < ApplicationRecord
   has_many :orders
   has_many :product_categories
   has_many :categories, through: :product_categories
+  has_many :carted_products
+  has_many :orders, through: :carted_products
 
-  # validates :name, presence: true, uniqueness: true
-  # validates :price, numericality: { greater_than: 0 }
-  # validates :description, length: { in: 8..500 }
+  validates :name, presence: true, uniqueness: true
+  validates :price, numericality: { greater_than: 0 }
+  validates :description, length: { in: 8..500 }
   # validates_format_of :image_url, :with => %r{\.(png|jpg|jpeg)$}i, :message => "incorrect file format (must be .png, .jpg, or .jpeg)", multiline: true
   
   
